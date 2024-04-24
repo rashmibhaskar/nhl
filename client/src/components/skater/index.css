@@ -1,0 +1,64 @@
+.no-data{
+  text-align:center;
+  margin:100px auto;
+  font-weight: bold;
+  font-size: 20px;
+}
+.skater-container{
+margin: 30px;
+}
+.player-profile {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background: #f1f1f1;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .player-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .player-photo {
+    border-radius: 50%;
+    margin-right: 20px;
+    width:100px;
+    height:100px;
+  }
+  
+  .player-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .player-stats {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    gap: 90px;
+    background: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width:100%;
+  }
+  
+  .stats-grid p {
+    margin: 0;
+    padding: 5px;
+    font-weight: bold;
+  }
+  
+  h5 {
+    margin-bottom: 10px;
+  }
+  

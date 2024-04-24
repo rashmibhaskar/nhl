@@ -1,0 +1,59 @@
+.goalie-profile {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background: #f1f1f1;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .goalie-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .goalie-container{
+    margin: 30px;
+    }
+
+  .goalie-photo {
+    border-radius: 50%;
+    margin-right: 20px;
+    width:100px;
+    height:100px;
+  }
+  
+  .goalie-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .goalie-stats {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+  }
+  
+  .goalie-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    gap: 50px;
+    background: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width:100%;
+  }
+  
+  .goalie-stats-grid p {
+    margin: 0;
+    padding: 5px;
+    font-weight: bold;
+  }
+  
+  h5 {
+    margin-bottom: 10px;
+  }
+  
