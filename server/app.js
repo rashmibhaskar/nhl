@@ -2,41 +2,34 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const util = require("util");
 const request = require("request");
-import cookieParser from "cookie-parser";
-import http from "http";
 
 const PORT = process.env.PORT || 3001;
 const app = express();
 const post = util.promisify(request.post);
 const get = util.promisify(request.get);
 
+const cors=require("cors");
+const corsOptions ={
+   origin:'*', 
+   credentials:true,            //access-control-allow-credentials:true
+   optionSuccessStatus:200,
+}
 
-var cors = require("cors");
-// app.use(cors());
-app.use(cors({
-  origin: 'https://nhl-d4004d9sx-rashmibhaskars-projects.vercel.app'
-}));
+app.use(cors(corsOptions))
+// var cors = require("cors");
+// // app.use(cors());
 
-// Or, allow multiple specific origins
-const allowedOrigins = [
-  'https://nhl-d4004d9sx-rashmibhaskars-projects.vercel.app',
-  'https://nhl-node.vercel.app',
-  'https://nhl-nine.vercel.app/',
-];
+// const corsOptions = {
+//   origin: ['https://nhl-d4004d9sx-rashmibhaskars-projects.vercel.app','https://nhl-nine.vercel.app/','https://nhl-node.vercel.app','https://nhl-node-git-main-rashmibhaskars-projects.vercel.app/','https://nhl-node-rashmibhaskars-projects.vercel.app/','http://localhost:3000' ],
+//   methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//   credentials: true,
+// };
 
-app.use(cors({
-  origin: function(origin, callback){
-      if (!origin || allowedOrigins.indexOf(origin) !== -1) {
-          callback(null, true)
-      } else {
-          callback(new Error('CORS not allowed for this origin'))
-      }
-  }
-}));
+// app.use(cors(corsOptions));
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

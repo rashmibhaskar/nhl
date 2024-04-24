@@ -87,7 +87,7 @@ const SummaryTable = () => {
     setError(null); // Reset errors
     try {
       const response = await axios.get(
-        `https://nhl-node.vercel.app/api/teams/${season}/${gid}`
+        `http://localhost:3001/api/teams/${season}/${gid}`
       );
       setTeams(response.data.mergedArray);
     } catch (error) {
@@ -116,7 +116,7 @@ const SummaryTable = () => {
   const toggleModal = () => setModal(!modal);
 
   async function fetchSeasons() {
-    const response = await axios.get(`https://nhl-node.vercel.app/api/seasons`);
+    const response = await axios.get(`http://localhost:3001/api/seasons`);
     setSeasonOption(response.data.body);
   }
 
