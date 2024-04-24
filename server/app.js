@@ -2,6 +2,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const util = require("util");
 const request = require("request");
+import cookieParser from "cookie-parser";
+import http from "http";
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -11,6 +13,10 @@ const get = util.promisify(request.get);
 
 var cors = require("cors");
 app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("port", PORT);
