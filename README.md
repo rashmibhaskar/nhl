@@ -1,5 +1,4 @@
-# nhl
-National Hockey League Summary Page
+# National Hockey League Summary Page
 
 Live: https://nhl-nine.vercel.app/
 
