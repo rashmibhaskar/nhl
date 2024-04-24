@@ -12,9 +12,26 @@ const get = util.promisify(request.get);
 
 
 var cors = require("cors");
-app.use(cors());
+// app.use(cors());
 app.use(cors({
-  origin: 'https://nhl-node.vercel.app/'
+  origin: 'https://nhl-d4004d9sx-rashmibhaskars-projects.vercel.app'
+}));
+
+// Or, allow multiple specific origins
+const allowedOrigins = [
+  'https://nhl-d4004d9sx-rashmibhaskars-projects.vercel.app',
+  'https://nhl-node.vercel.app',
+  'https://nhl-nine.vercel.app/',
+];
+
+app.use(cors({
+  origin: function(origin, callback){
+      if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+          callback(null, true)
+      } else {
+          callback(new Error('CORS not allowed for this origin'))
+      }
+  }
 }));
 
 app.use(express.json());
