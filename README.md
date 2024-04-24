@@ -11,6 +11,7 @@ Live: https://nhl-nine.vercel.app/
 - A team statistics page (or a modal) that displays more statistics about a particular team.
 - The user can select a team in the summary page to get to that team’s stats page.
 - The stats page includes more detail about the team (but not necessarily all of the details from the stats API endpoint), and can navigate back to the summary page.
+- Features: dropdown for choice of season and game type, sort by each coloumns in summary table, a modal component that display team stats, different tabs for skaters and goalie player stats.
 
 # Sample API calls used are:
 - To get the all Team Summary : https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20232024%20and%20gameTypeId=2
