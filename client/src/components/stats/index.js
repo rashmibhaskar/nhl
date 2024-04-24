@@ -29,7 +29,7 @@ const Stat = ({ team }) => {
     setIsLoading(true); // Start loading
     try {
       const response = await axios.get(
-        `https://nhl-node-jm12xat85-rashmibhaskars-projects.vercel.app/api/stats/${team && team.triCode}/${
+        `https://nhl-node.vercel.app/api/stats/${team && team.triCode}/${
           team && team.seasonId
         }/${team && team.gameId}`
       );
